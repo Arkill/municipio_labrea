@@ -1,0 +1,102 @@
+/* Estilização do footer */
+footer {
+    background-color: #00bfa6;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    min-height: 100px; /* Altura mínima para o footer */
+    border-top: 1px solid #fff; /* Borda branca superior */
+    z-index: 1000;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+/* Container principal do footer */
+.footer-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Seção com informações à esquerda */
+.footer-info-left {
+    flex: 1;
+    text-align: left;
+}
+
+/* Seção com informações no centro */
+.footer-info-center {
+    flex: 2;
+    text-align: center;
+}
+
+/* Ajusta o estilo das informações no footer */
+.footer-info-left p, 
+.footer-info-center p {
+    margin: 0.25rem 0;
+}
+
+.footer-info-left a, 
+.footer-info-center a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-info-left a:hover, 
+.footer-info-center a:hover {
+    text-decoration: underline;
+    color: #e0e0e0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info-left, 
+    .footer-info-center {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .social-media {
+        margin-top: 0.25rem;
+    }
+
+    .social-media a {
+        width: 20px; /* Tamanho menor dos ícones em telas menores */
+        height: 20px;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info-left, 
+    .footer-info-center {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .social-media {
+        margin-top: 0.25rem;
+    }
+
+    .social-media a {
+        width: 20px; /* Tamanho menor dos ícones em telas menores */
+        height: 20px;
+    }
+}

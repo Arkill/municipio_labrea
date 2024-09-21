@@ -1,0 +1,284 @@
+/* Reset básico e configuração de fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #0065b3;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    z-index: 1000; /* Garante que o cabeçalho esteja acima da sidebar */
+    position: relative; /* Garante que o cabeçalho esteja na frente */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Faz o logo ocupar o máximo de espaço disponível à esquerda */
+}
+
+.logo img {
+    width: 180px; /* Largura reduzida */
+    height: 90px; /* Altura reduzida */
+    border-radius: 8px; /* Bordas arredondadas ajustadas */
+    border: 2px solid white; /* Adiciona uma borda branca ao logo */
+    background-color: #ffffff; /* Adiciona um fundo branco ao logo */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil para um efeito de profundidade */
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+    margin-left: 250px; 
+    height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #00bfa6;
+    padding: 15px;
+    color: white;
+    position: fixed; /* Mantém a sidebar fixa na tela */
+    top: 0; /* Alinha a sidebar ao topo da página */
+    left: 0; /* Alinha a sidebar ao lado esquerdo da página */
+    height: 100vh; /* Garante que a sidebar ocupe a altura total da tela */
+    z-index: 1000; /* Garante que a sidebar esteja sobre outros elementos */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao esconder/mostrar a sidebar */
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%); /* Move a sidebar para fora da tela */
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #004a80; /* Cor de fundo ao passar o mouse */
+}
+
+.sidebar .social-media {
+    margin-top: 20px;
+}
+
+.sidebar .social-media a {
+    margin-right: 0.5rem;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    margin-left: 250px; /* Adiciona margem esquerda para deixar espaço para a sidebar */
+    border-radius: 8px;
+}
+
+h2 {
+    border-bottom: 2px solid #0065b3;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #0065b3;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha a barra de pesquisa à direita */
+    margin-top: 20px; /* Espaço acima da barra de pesquisa */
+}
+
+.search-container input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px 0 0 20px; /* Bordas arredondadas para um estilo mais moderno */
+    width: 250px; /* Largura do campo de pesquisa */
+    font-size: 16px;
+    outline: none; /* Remove o contorno padrão ao focar */
+    transition: box-shadow 0.3s ease-in-out; /* Transição suave para o efeito de foco */
+}
+
+.search-container input[type="text"]:focus {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Efeito de neon ao focar no campo de pesquisa */
+    border-color: #00bfa6; /* Cor da borda ao focar */
+}
+
+.search-container button {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 0 20px 20px 0; /* Bordas arredondadas apenas na direita */
+    background-color: #0065b3;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out; /* Transição suave para hover */
+}
+
+.search-container button:hover {
+    background-color: #004a80; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Efeito de neon no botão ao passar o mouse */
+}
+
+/* Estilização do footer */
+footer {
+    background-color: #171717;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #fff; /* Borda superior para separar o conteúdo do rodapé */
+    margin-top: auto; /* Garante que o footer fique na parte inferior da tela */
+    width: 100%;
+}
+
+.footer-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-info-center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-info-left p,
+.footer-info-center p {
+    margin: 0.25rem 0;
+}
+
+.footer-info-left a,
+.footer-info-center a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-info-left a:hover,
+.footer-info-center a:hover {
+    text-decoration: underline;
+    color: #e0e0e0;
+}
+
+.social-media {
+    margin-top: 0.5rem;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 0.5rem; /* Espaçamento entre ícones */
+    width: 24px; /* Tamanho dos ícones */
+    height: 24px;
+    background: linear-gradient(135deg, #3b5998, #8b9dc3); /* Gradiente padrão */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+}
+
+.social-media a.facebook {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3); /* Gradiente do Facebook */
+}
+
+.social-media a.instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Gradiente do Instagram */
+}
+
+.social-media img {
+    width: 24px; /* Tamanho dos ícones */
+    height: auto; /* Mantém a proporção */
+    vertical-align: middle; /* Alinha os ícones com o texto */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static; /* Sidebar não fixa em telas menores */
+        width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+        height: auto; /* Ajusta a altura para o conteúdo */
+        padding: 10px;
+        transform: translateX(0); /* Garante que a sidebar esteja visível em telas menores */
+    }
+
+    .content {
+        margin-left: 0; /* Remove a margem esquerda para telas menores */
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info-left,
+    .footer-info-center {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .social-media {
+        margin-top: 0.25rem;
+    }
+
+    .social-media a {
+        width: 20px; /* Tamanho menor dos ícones em telas menores */
+        height: 20px;
+    }
+
+    main {
+        flex-direction: column; /* Ajusta o layout principal para uma coluna em dispositivos móveis */
+    }
+}

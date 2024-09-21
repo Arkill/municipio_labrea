@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos Municipais - Prefeitura de Labrea</title>
+    <link rel="shortcut icon" href="img/teste.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/imglbr-removebg-preview.png" alt="Logo da Prefeitura">
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Pesquisar...">
+            <button></button>
+        </div>
+        
+    </header>
+
+    <main>
+        <button class="sidebar-toggle" aria-label="Toggle sidebar">MENU ☰</button>
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Página Principal</a></li>
+                    <li><a href="#"><strong>Acesso à Informação</strong></a></li>
+                    <li><a href="#">Portal da Transparência</a></li>
+                    <!-- Outras opções de navegação -->
+                </ul>
+                <ul>
+                    <li><a href="#acesso-informacao">Acesso a Informação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#estrutura-administrativa">Estrutura Administrativa</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li>
+                        <a href="#">Município</a>
+                        <ul class="sub-menu">
+                            <li><a href="#dados_oficiais">Dados Oficiais</a></li>
+                            <li><a href="#dados_historicos">Dados Históricos</a></li>
+                            <li><a href="#prefeitura">Prefeitura</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#legislacao">Legislação</a></li>
+                    <li><a href="#licitacoes">Notícias</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#portal-transparencia">Portal da Transparência</a></li>
+                    <li><a href="#servicos-online">Serviços Online</a></li>
+                    <li><a href="#turismo">Turismo</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="content">
+            <article id="title">
+                <h2 id="titlet">Planos Municipais</h2>
+                <hr>
+                <div id="subtitle">
+                    <a href="#">
+                        <h3 class="subt">Principal</h3>
+                    </a>
+                    <h3>/</h3>
+                    <a href="#">
+                        <h3 class="subt">Documentos</h3>
+                    </a>
+                </div>
+            </article>
+            <article id="artbody">
+                <p class="artp">Esta seção compreende todos os Planos Municipais disponibilizados pela Prefeitura Municipal de Labrea.</p>
+                
+                <h3 class="artp">Planos Disponíveis</h3>
+                <ul id="artul">
+                    <li><a href="#">Plano Municipal de Educação (2025 á 2029)</a></li>
+                    <li><a href="#">Plano Municipal de Saúde (2025 á 2029)</a></li>
+                    <li><a href="#">Plano Municipal de Gestão Ambiental. (2025 á 2029)</a></li>
+                    <!-- Mais planos -->
+                </ul>
+                <h3 class="artp">Anexos</h3>
+                <ul id="artul">
+                    <li><a href="plano_educacao.pdf" target="_blank">Plano Municipal de Educação (2025 á 2029)</a></li>
+                    <li><a href="plano_saude.pdf" target="_blank">Plano Municipal de Saúde (2025 á 2029)</a></li>
+                    <li><a href="plano_residuos.pdf" target="_blank">Plano Municipal de Gestão de Resíduos da Construção Civil</a></li>
+                    <!-- Mais anexos -->
+                </ul>
+            </article>
+        </section>
+        <div class="social-media">
+            <p>Siga-nos:</p>
+            <div id="social-mediasub">
+                <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <!-- Seção alinhada à esquerda -->
+            <div class="footer-info-left">
+                <p>&copy; 2024 Prefeitura Municipal de Labrea</p>
+                <p>Razão Social: Município de Labrea</p>
+                <p>CNPJ: 05830872000109</p>
+                <p>(99) 9999-9999</p>
+            </div>
+    
+            <!-- Seção centralizada -->
+            <div class="footer-info-center">
+                <p><a href="#">Política de Privacidade</a></p>
+                <p><a href="#">Lei Geral de Proteção de Dados</a></p>
+                <p><a href="#">Mapa do Site</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.sidebar-toggle').addEventListener('click', function () {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+         });
+    </script>
+</body>
+</html>

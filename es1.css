@@ -1,0 +1,16 @@
+/* Reset básico e configuração de fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Da logo */
+header {
+    background: #00bfa6;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    z-index: 10000;
+}
+
