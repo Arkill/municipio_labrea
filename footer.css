@@ -1,16 +1,15 @@
 /* Estilização do footer */
 footer {
-    background-color: #00bfa6;
+    background: linear-gradient(135deg, #00bfa6, #004d40); /* Gradiente de verde claro para verde escuro */
     color: #fff;
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
-    min-height: 100px; /* Altura mínima para o footer */
-    border-top: 1px solid #fff; /* Borda branca superior */
+    min-height: 250px;
+    border-top: 1px solid #fff;
     z-index: 1000;
-    font-family: "Source Sans 3", sans-serif;
 }
 
 /* Container principal do footer */
@@ -20,19 +19,34 @@ footer {
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Alinha os itens ao topo */
+    flex-wrap: wrap; /* Permite que os itens se movam para baixo em telas menores */
 }
 
 /* Seção com informações à esquerda */
-.footer-info-left {
+.footer-info-left, 
+.footer-info-center {
     flex: 1;
-    text-align: left;
+    text-align: center; /* Centraliza o texto */
+    margin: 0 1rem; /* Margem uniforme dos dois lados */
 }
 
-/* Seção com informações no centro */
+.footer-info-left {
+    text-align: left;
+    margin-right: 1rem; /* Ajusta a margem direita */
+}
+
 .footer-info-center {
-    flex: 2;
-    text-align: center;
+    text-align: right;
+    margin-left: 1rem; /* Ajusta a margem esquerda */
+}
+
+/* Estilo da imagem do footer */
+.footer-img {
+    max-width: 100%; /* Ajusta a imagem para não ultrapassar o container */
+    height: auto;
+    display: block;
+    margin: 1rem auto; /* Centraliza a imagem */
 }
 
 /* Ajusta o estilo das informações no footer */
@@ -65,38 +79,10 @@ footer {
     .footer-info-left, 
     .footer-info-center {
         text-align: center;
-        margin-bottom: 1rem;
+        margin: 1rem 0; /* Margem vertical uniforme */
     }
 
-    .social-media {
-        margin-top: 0.25rem;
-    }
-
-    .social-media a {
-        width: 20px; /* Tamanho menor dos ícones em telas menores */
-        height: 20px;
-    }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .footer-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-info-left, 
-    .footer-info-center {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .social-media {
-        margin-top: 0.25rem;
-    }
-
-    .social-media a {
-        width: 20px; /* Tamanho menor dos ícones em telas menores */
-        height: 20px;
+    .social-icon i {
+        font-size: 1.5em; /* Reduz o tamanho dos ícones em telas menores */
     }
 }
