@@ -7,9 +7,11 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #00BFA6, #ffffff);
+    background-image: url('img/b2ap3_large_Labrea.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página é rolada */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -36,13 +38,10 @@ header {
 }
 
 .logo img {
-    width: 180px; /* Largura reduzida */
-    height: 90px; /* Altura reduzida */
+    width: 300px; /* Largura reduzida */
+    height: 100px; /* Altura reduzida */
     border-radius: 8px; /* Bordas arredondadas ajustadas */
-    border: 2px solid white; /* Adiciona uma borda branca ao logo */
-    background-color: #ffffff; /* Adiciona um fundo branco ao logo */
     object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil para um efeito de profundidade */
 }
 
 .search-container {
@@ -275,7 +274,14 @@ hr {
         background-color: rgba(245, 245, 245, 0);
         color: #00bfa6; 
     }
-    
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Ajusta a imagem para caber no corpo sem cortar */
+        background-position: top; /* Alinha a imagem ao topo */
+        background-attachment: scroll; /* Faz a imagem rolar com o conteúdo em dispositivos móveis */
+    }
 }
 
 @media (max-width: 846px){
