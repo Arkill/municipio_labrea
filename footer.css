@@ -43,7 +43,8 @@ footer {
 
 /* Estilo da imagem do footer */
 .footer-img {
-    max-width: 50%; /* Ajusta a imagem para não ultrapassar o container */
+    max-width: 30%; /* Ajusta a imagem para não ultrapassar o container */
+    height: auto;
     display: block;
     margin: 1rem auto; /* Centraliza a imagem */
 }
