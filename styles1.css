@@ -305,9 +305,13 @@ hr {
     }
 
     aside {
-        width: 90vw; /* Ajusta a largura da sidebar */
-        margin: 0; /* Remove margem lateral */
-    }
+    background-color: #15b19c;
+    width: 100%; /* Ajuste a largura para ocupar o espaço disponível */
+    max-width: 300px; /* Limite a largura para não ficar excessivamente largo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border-radius: 0.5em;
+    padding: 1rem;
+}
 
     .social-media {
         width: 18vw; /* Ajusta a largura do container social */
