@@ -7,10 +7,11 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #00BFA6, #ffffff);
+    background-image: url('img/270px-Labrea.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 main {
@@ -36,11 +37,10 @@ header {
 }
 
 .logo img {
-    width: 180px; /* Largura reduzida */
-    height: 90px; /* Altura reduzida */
+    width: 300px; /* Largura reduzida */
+    height: 100px; /* Altura reduzida */
     border-radius: 8px; /* Bordas arredondadas ajustadas */
     object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
-    
 }
 
 .search-container {
