@@ -7,21 +7,10 @@
 }
 
 body {
-    background-image: url('img/b2ap3_large_Labrea.jpeg');
+    background: linear-gradient(to bottom, #00BFA6, #ffffff);
     background-repeat: no-repeat;
-    background-size: cover; /* Cobrir a tela inteira */
-    background-position: center; /* Centraliza a imagem no corpo */
-    background-attachment: fixed; /* Fixa a imagem enquanto a página é rolada */
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Ajustes para telas menores */
-@media (max-width: 768px) {
-    body {
-        background-size: contain; /* Ajusta a imagem para caber no corpo sem cortar */
-        background-position: top; /* Alinha a imagem ao topo */
-        background-attachment: scroll; /* Faz a imagem rolar com o conteúdo em dispositivos móveis */
-    }
 }
 
 main {
@@ -47,10 +36,13 @@ header {
 }
 
 .logo img {
-    width: 300px; /* Largura reduzida */
-    height: 100px; /* Altura reduzida */
+    width: 180px; /* Largura reduzida */
+    height: 90px; /* Altura reduzida */
     border-radius: 8px; /* Bordas arredondadas ajustadas */
+    border: 2px solid white; /* Adiciona uma borda branca ao logo */
+    background-color: #ffffff; /* Adiciona um fundo branco ao logo */
     object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil para um efeito de profundidade */
 }
 
 .search-container {
@@ -168,6 +160,9 @@ li:hover > .sub-menu {
     font-family: "Source Sans 3", sans-serif;
 }
 
+section {
+    width: 68vw;
+}
 
 #title {
     background-color: #202A32;
@@ -228,7 +223,6 @@ hr {
     font-size: 1.2em;
     margin: 2rem 0rem;
     font-family: "Source Sans 3", sans-serif;
-    
 }
 
 .social-icon {
@@ -286,15 +280,51 @@ hr {
 
 @media (max-width: 846px){
     main {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        align-items: center;
+        gap: 1em;
+        width: 100%;
+        padding: 0em 2em;
     }
-    
-    aside {
+}
+
+@media (max-width: 847px){
+
+    header {
+        display: flex;
+        flex-direction: column; /* Alinha os itens verticalmente */
+        justify-content: center; 
+        align-items: center;
+        border: none; /* Remova a borda se não for necessária */
+    }
+    .logo {
+        margin: 0 auto;
+    }
+
+    aside{
+        width: 50vw;
+        margin-left: 50px;
+    }
+
+    #social-mediasub {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .sidebar {
         display: none;
+        
     }
 
     .sidebar-toggle {
-        display: block; /* Mostrar o botão em telas pequenas */
-        margin-bottom: 20px;
+        display: block; /* Mostrar o botão para telas menores */
+    }
+
+    .sidebar.active {
+        display: block; /* Mostrar a sidebar quando ativa */
     }
 }
+
+
