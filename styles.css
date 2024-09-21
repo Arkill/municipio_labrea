@@ -7,11 +7,12 @@
 }
 
 body {
-    background-image: url('img/270px-Labrea.jpg');
+    background-image: url('img/b2ap3_large_Labrea.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página é rolada */
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 main {
