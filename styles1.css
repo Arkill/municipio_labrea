@@ -9,9 +9,19 @@
 body {
     background-image: url('img/b2ap3_large_Labrea.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; /* Cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página é rolada */
     font-family: Arial, Helvetica, sans-serif;
+}
 
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Ajusta a imagem para caber no corpo sem cortar */
+        background-position: top; /* Alinha a imagem ao topo */
+        background-attachment: scroll; /* Faz a imagem rolar com o conteúdo em dispositivos móveis */
+    }
 }
 
 main {
@@ -278,53 +288,15 @@ hr {
 
 @media (max-width: 846px){
     main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; 
-        align-items: center;
-        gap: 1em;
-        width: 100%;
-        padding: 0em 2em;
+        display: block;
     }
-}
-
-@media (max-width: 847px){
-
-    header {
-        display: flex;
-        flex-direction: column; /* Alinha os itens verticalmente */
-        justify-content: center; 
-        align-items: center;
-        border: none; /* Remova a borda se não for necessária */
-    }
-    .logo {
-        margin: 0 auto;
-    }
-
-    aside{
-        width: 70vw;
-    }
-
-    #social-mediasub {
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .sidebar {
+    
+    aside {
         display: none;
     }
 
     .sidebar-toggle {
-        display: block; /* Mostrar o botão para telas menores */
+        display: block; /* Mostrar o botão em telas pequenas */
+        margin-bottom: 20px;
     }
-
-    .sidebar.active {
-        display: block; /* Mostrar a sidebar quando ativa */
-    }
-    .sub-menu {
-        left: 30%; /* Faz com que o submenu apareça à direita do item pai */
-    }
-    
 }
-
-
