@@ -86,14 +86,14 @@ header {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Efeito de neon no botão ao passar o mouse */
 }
 
-aside{
+aside {
     background-color: #15b19c;
     width: 21vw;
     border-radius: 0.5em;
     padding: 1rem;
 }
 
-aside a{
+aside a {
     color: white;
 }
 
@@ -146,7 +146,7 @@ li:hover > .sub-menu {
 
 /* Estilo para itens de submenu */
 .sub-menu li {
-    width:12rem;
+    width: 12rem;
     padding: 0.3rem;
 }
 
@@ -170,12 +170,12 @@ section {
     border-radius: 0.5em;
 }
 
-h2#titlet{
+h2#titlet {
     font-size: 2em;
     font-family: "Source Sans 3", sans-serif;
 }
 
-h3.subt{
+h3.subt {
     font-size: 1rem;
     color: white;
     font-family: "Source Sans 3", sans-serif;
@@ -199,12 +199,12 @@ hr {
     border-radius: 0.5em;
 }
 
-#artul{
+#artul {
     margin-left: 3em;
     font-family: "Source Sans 3", sans-serif;
 }
 
-.artp{
+.artp {
     margin: 1em 2em;
     font-size: 1rem;
     font-family: "Source Sans 3", sans-serif;
@@ -264,7 +264,8 @@ hr {
     border-radius: 0.5em;
 }
 
-@media (max-width: 1200px){
+/* Ajustes para telas menores */
+@media (max-width: 1200px) {
     .social-icon {
         background-color: white; 
         color: #00bfa6;
@@ -274,6 +275,7 @@ hr {
         background-color: rgba(245, 245, 245, 0);
         color: #00bfa6; 
     }
+}
 
 /* Ajustes para telas menores */
 @media (max-width: 768px) {
@@ -282,9 +284,42 @@ hr {
         background-position: top; /* Alinha a imagem ao topo */
         background-attachment: scroll; /* Faz a imagem rolar com o conteúdo em dispositivos móveis */
     }
+
+    main {
+        grid-template-columns: 1fr; /* Muda para uma coluna em dispositivos móveis */
+        padding: 1em; /* Ajusta o padding */
+    }
+
+    header {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .search-container {
+        justify-content: center; /* Centraliza a barra de pesquisa */
+        width: 100%; /* Ajusta a largura da barra de pesquisa */
+    }
+
+    .search-container input[type="text"] {
+        width: 80%; /* Aumenta a largura no mobile */
+    }
+
+    aside {
+        width: 90vw; /* Ajusta a largura da sidebar */
+        margin: 0; /* Remove margem lateral */
+    }
+
+    .social-media {
+        width: 18vw; /* Ajusta a largura do container social */
+    }
+
+    #social-mediasub {
+        flex-direction: column; /* Alinha os ícones social em coluna */
+        width: 100%; /* Ajusta a largura */
+    }
 }
 
-@media (max-width: 846px){
+@media (max-width: 846px) {
     main {
         display: flex;
         flex-wrap: wrap;
@@ -296,32 +331,16 @@ hr {
     }
 }
 
-@media (max-width: 847px){
-
+@media (max-width: 847px) {
     header {
         display: flex;
         flex-direction: column; /* Alinha os itens verticalmente */
         justify-content: center; 
         align-items: center;
-        border: none; /* Remova a borda se não for necessária */
     }
-    .logo {
-        margin: 0 auto;
-    }
-
-    aside{
-        width: 60vw;
-        margin-left: 50px;
-    }
-
-    #social-mediasub {
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+    
     .sidebar {
         display: none;
-        
     }
 
     .sidebar-toggle {
@@ -332,5 +351,3 @@ hr {
         display: block; /* Mostrar a sidebar quando ativa */
     }
 }
-
-
