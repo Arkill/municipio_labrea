@@ -168,9 +168,6 @@ li:hover > .sub-menu {
     font-family: "Source Sans 3", sans-serif;
 }
 
-section {
-    width: 68vw;
-}
 
 #title {
     background-color: #202A32;
@@ -231,6 +228,7 @@ hr {
     font-size: 1.2em;
     margin: 2rem 0rem;
     font-family: "Source Sans 3", sans-serif;
+    
 }
 
 .social-icon {
